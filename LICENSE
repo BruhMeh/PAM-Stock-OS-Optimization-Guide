@@ -1,0 +1,71 @@
+# LICENSE
+
+# Licensing Notice
+
+The original **PAM Stock OS Optimization Guide**, including its technical recommendations, research, testing methodology and optimization strategies, is the work of **Uri**.
+
+This repository does **not** claim ownership of the original guide or its technical content.
+
+---
+
+## Community Edition
+
+The Community Edition provides editorial improvements only, including:
+
+* Markdown conversion
+* Documentation formatting
+* Improved structure and navigation
+* Grammar and OCR corrections
+* Repository organization
+* Publishing support
+
+No technical recommendations are intentionally modified unless explicitly documented.
+
+---
+
+## Attribution
+
+### Original Guide
+
+**Author**
+
+Uri
+
+Responsible for:
+
+* Research
+* Testing
+* Optimization methodology
+* Technical documentation
+
+---
+
+### Community Edition
+
+**Editor**
+
+BruhMeh
+
+Responsible for:
+
+* Editorial review
+* Documentation formatting
+* Markdown conversion
+* Documentation organization
+* Publishing support
+
+---
+
+## Usage
+
+Unless otherwise specified by the original author, all rights to the original technical content remain with **Uri**.
+
+Contributions made as part of the Community Edition apply only to the documentation, formatting and editorial improvements contained in this repository.
+
+---
+
+## Future License
+
+This file serves as a licensing notice until an official project license is defined by the original author.
+
+If an official license is published, this file should be replaced accordingly.
