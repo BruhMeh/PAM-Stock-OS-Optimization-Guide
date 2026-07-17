@@ -1,3 +1,7 @@
+>[!WARNING]
+>From this point on, the guide was not yet peer validated, follow with caution!
+>
+
 # 05-Game-Driver.md
 
 # Game Driver Configuration
