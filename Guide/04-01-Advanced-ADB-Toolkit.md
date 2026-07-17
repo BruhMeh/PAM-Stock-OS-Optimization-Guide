@@ -1,6 +1,3 @@
-> [!WARNING]
-> BELLOW THIS POINT THE GUIDE IS STILL PENDIGN REVISION. FOLLOW WITH CAUTION.
-
 # 04-Advanced-ADB-Toolkit.md
 
 # Advanced ADB Optimization Toolkit
