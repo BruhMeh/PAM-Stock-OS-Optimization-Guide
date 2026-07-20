@@ -41,13 +41,43 @@ Android's Hardware Composer already manages display composition efficiently.
 
 ---
 
+## FPS Lock for better performance
+
+VSync can forces games to dip bellow 60Hz to save power. You can use ADB to override the peak and minimum refresh rates, which forces VSync to sync at the highest possible panel speed (e.g., 60Hz for the PAM):
+
+```bash
+adb shell settings put global peak_refresh_rate 60.0
+adb shell settings put global min_refresh_rate 60.0
+```
+
+---
+
 ## SurfaceFlinger Optimizations
 
-Some firmware versions expose additional rendering properties through SurfaceFlinger.
+> [!CAUTION]
+> DO NOT DO THIS ON OLED DEVICES OR SCREENS WITH MORE THAN 60HZ PANEL SPEEDS!
 
-Only apply SurfaceFlinger commands that are explicitly supported by your firmware version and documented in the original guide.
+This command instructs the SurfaceFlinger service, which handles how Android draws images on the screen, to bypass vertical synchronization (VSync). By disabling VSync, you
+eliminate the "wait time" where the system holds a frame until the screen is ready to refresh. This results in a direct, snappier feel for your controls, which is highly beneficial for fast-paced action or retro games where input precision is key.
 
-Do not attempt to enable undocumented properties.
+>[!WARNING]
+>Disabling it can cause some screen tearing and increase battery usage, do apply with these caveats in mind.
+>
+
+```bash
+adb shell service call SurfaceFlinger 1008 i32 1
+```
+
+> [!TIP]
+> **Uri's Toughts**
+>
+> The biggest benefit of all is that this seems to help with ghosting, I dont notice it at all, after disabling it!
+
+In case you want to enable it again you can simply use:
+
+```bash
+adb shell service call SurfaceFlinger 1008 i32 0
+```
 
 ---
 
