@@ -64,21 +64,26 @@ eliminate the "wait time" where the system holds a frame until the screen is rea
 >Disabling it can cause some screen tearing and increase battery usage, do apply with these caveats in mind.
 >
 
+
 ```bash
-adb shell service call SurfaceFlinger 1008 i32 1
+adb shell su -c "service call SurfaceFlinger 1008 i32 1"
+```
+
+>[!NOTE]
+>You need to have root privileges to execute this command, magisk or your root manager could ask you to confirm the operation on your device screen.
+>
+
+In case you want to enable it again you can simply use:
+
+```bash
+adb shell su -c "service call SurfaceFlinger 1008 i32 0"
 ```
 
 > [!TIP]
 > **Uri's Toughts**
 >
 > The biggest benefit of all is that this seems to help with ghosting, I dont notice it at all, after disabling it!
-
-In case you want to enable it again you can simply use:
-
-```bash
-adb shell service call SurfaceFlinger 1008 i32 0
-```
-
+> 
 ---
 
 ## Reboot the Device
